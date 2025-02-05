@@ -13,9 +13,9 @@ const fontSans = FontSans({
   variable: '--font-sans'
 })
 
-const title = 'Morphic'
+const title = 'nexa'
 const description =
-  'A fully open-source AI-powered answer engine with a generative UI.'
+  'A search and answer engine, powered up with AI. Developed by Nguyen Tien Dat & Nguyen Van Toan'
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://morphic.sh'),
