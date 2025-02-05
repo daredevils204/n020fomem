@@ -5,7 +5,7 @@ import { cn } from '@/lib/utils'
 function IconLogo({ className, ...props }: React.ComponentProps<'svg'>) {
   return (
     <svg version="1.0" xmlns="http://www.w3.org/2000/svg"
- width="300.000000pt" height="300.000000pt" viewBox="0 0 300.000000 300.000000"
+ width="80" height="80" viewBox="0 0 300.000000 300.000000"
  preserveAspectRatio="xMidYMid meet">
 <metadata>
 Created by potrace 1.10, written by Peter Selinger 2001-2011
