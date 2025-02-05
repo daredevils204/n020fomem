@@ -80,8 +80,7 @@ export function ChatPanel({
     >
       {messages.length === 0 && (
         <div className="mb-8">
-          <IconLogo className="size-12 text-muted-foreground dark:hidden" />
-          <DarkIconLogo className="hidden size-12 text-muted-foreground dark:block" />
+          <IconLogo className="size-12 text-muted-foreground" />
         </div>
       )}
       <form
