@@ -80,7 +80,7 @@ export function ChatPanel({
     >
       {messages.length === 0 && (
         <div className="mb-8">
-          <IconLogo className="size-12 text-muted-foreground" />
+          <img className="size-12 text-muted-foreground" src="IMG_7118.png" alt="nexa logo" />
         </div>
       )}
       <form
