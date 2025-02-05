@@ -7,9 +7,6 @@ function IconLogo({ className, ...props }: React.ComponentProps<'svg'>) {
     <svg version="1.0" xmlns="http://www.w3.org/2000/svg"
  width="30" height="30" viewBox="0 0 300.000000 300.000000"
  preserveAspectRatio="xMidYMid meet">
-<metadata>
-Created by potrace 1.10, written by Peter Selinger 2001-2011
-</metadata>
 <g transform="translate(0.000000,300.000000) scale(0.100000,-0.100000)"
 fill="#000000" stroke="none">
 <path d="M1375 2689 c-355 -39 -673 -232 -868 -525 -96 -145 -147 -267 -183
