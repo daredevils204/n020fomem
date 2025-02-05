@@ -80,7 +80,7 @@ export function ChatPanel({
     >
       {messages.length === 0 && (
         <div className="mb-8">
-          <h5 class="text-xl text-black tracking-tight font-bold dark:text-white">nexa</h5>
+          <h5 className="text-xl text-black tracking-tight font-bold dark:text-white">nexa</h5>
         </div>
       )}
       <form
