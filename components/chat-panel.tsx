@@ -158,8 +158,8 @@ export function ChatPanel({
               </Button>
             </div>
           </div>
-          <p className="text-sm text-gray-500 dark:text-gray-400">Nexa can answer wrong. Please check the information before trusting or using.</p>
         </div>
+        <p className="text-gray-500 dark:text-gray-400">Nexa can answer wrong. Please check the information before trusting or using.</p>
 
         {messages.length === 0 && (
           <EmptyScreen
