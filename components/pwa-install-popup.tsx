@@ -48,14 +48,14 @@ export function PWAInstallPopup() {
     <Dialog open={isOpen} onOpenChange={setIsOpen}>
       <DialogContent className="sm:max-w-[425px]">
         <DialogHeader>
-          <DialogTitle>Install NexaSearch</DialogTitle>
-          <DialogDescription>Install NexaSearch on your device for quick and easy access!</DialogDescription>
+          <DialogTitle>Cài đặt NexaSearch</DialogTitle>
+          <DialogDescription>Cài đặt NexaSearch trên thiết bị của bạn để truy cập nhanh chóng và dễ dàng!</DialogDescription>
         </DialogHeader>
         <DialogFooter>
           <Button variant="outline" onClick={() => setIsOpen(false)}>
-            Maybe later
+            Có thể lần sau
           </Button>
-          <Button onClick={handleInstall}>Install</Button>
+          <Button onClick={handleInstall}>Cài đặt</Button>
         </DialogFooter>
       </DialogContent>
     </Dialog>
