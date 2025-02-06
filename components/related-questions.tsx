@@ -44,7 +44,7 @@ export const RelatedQuestions: React.FC<RelatedQuestionsProps> = ({
   const header = (
     <div className="flex items-center gap-1">
       <Repeat2 size={16} />
-      <div>Related</div>
+      <div>Có liên quan</div>
     </div>
   )
 
@@ -95,7 +95,7 @@ export const RelatedQuestions: React.FC<RelatedQuestionsProps> = ({
               </div>
             ))
         ) : (
-          <div>Not an array</div>
+          <div>Không phải là một mảng</div>
         )}
       </div>
     </CollapsibleMessage>
