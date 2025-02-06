@@ -42,7 +42,7 @@ export function ReasoningAnswerSection({
           />
         ) : (
           <StatusIndicator icon={Check} iconClassName="text-green-500">
-            {content.reasoning.trim().length.toLocaleString()} chars
+            {content.reasoning.trim().length.toLocaleString()} kí tự
           </StatusIndicator>
         )}
       </div>
