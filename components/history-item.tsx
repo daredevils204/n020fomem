@@ -17,7 +17,7 @@ const formatDateWithTime = (date: Date | string) => {
   yesterday.setDate(yesterday.getDate() - 1)
 
   const formatTime = (date: Date) => {
-    return date.toLocaleString('en-US', {
+    return date.toLocaleString('vi-VN', {
       hour: '2-digit',
       minute: '2-digit',
       hour12: true
