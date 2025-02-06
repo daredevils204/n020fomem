@@ -1,3 +1,4 @@
+import { PWARegister } from "@/components/pwa-register"
 import Footer from '@/components/footer'
 import Header from '@/components/header'
 import { Sidebar } from '@/components/sidebar'
@@ -59,6 +60,7 @@ export default function RootLayout({
           <Header />
           {children}
           {enableSaveChatHistory && <Sidebar />}
+          <PWARegister />
           <Footer />
           <Toaster />
         </ThemeProvider>
