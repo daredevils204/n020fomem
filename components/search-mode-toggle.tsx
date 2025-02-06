@@ -36,7 +36,7 @@ export function SearchModeToggle() {
       )}
     >
       <Globe className="size-4" />
-      <span className="text-xs">Search</span>
+      <span className="text-xs">Tìm kiếm</span>
     </Toggle>
   )
 }
