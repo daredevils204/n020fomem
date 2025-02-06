@@ -36,23 +36,23 @@ export const Section: React.FC<SectionProps> = ({
   const iconClassName = 'mr-1.5 text-muted-foreground'
   let icon: React.ReactNode
   switch (title) {
-    case 'Images':
+    case 'Hình ảnh':
       // eslint-disable-next-line jsx-a11y/alt-text
       icon = <Image size={iconSize} className={iconClassName} />
       break
-    case 'Videos':
+    case 'Video':
       icon = <Film size={iconSize} className={iconClassName} />
       break
-    case 'Sources':
+    case 'Nguồn':
       icon = <Newspaper size={iconSize} className={iconClassName} />
       break
-    case 'Answer':
+    case 'Trả lời':
       icon = <BookCheck size={iconSize} className={iconClassName} />
       break
-    case 'Related':
+    case 'Liên quan':
       icon = <Repeat2 size={iconSize} className={iconClassName} />
       break
-    case 'Follow-up':
+    case 'Tiếp theo':
       icon = <MessageCircleMore size={iconSize} className={iconClassName} />
       break
     default:
@@ -97,7 +97,7 @@ export function ToolArgsSection({
       <ToolBadge tool={tool}>{children}</ToolBadge>
       {number && (
         <StatusIndicator icon={Check} iconClassName="text-green-500">
-          {number} results
+          {number} kết quả
         </StatusIndicator>
       )}
     </Section>
