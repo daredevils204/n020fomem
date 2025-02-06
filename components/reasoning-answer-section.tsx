@@ -34,7 +34,7 @@ export function ReasoningAnswerSection({
     <div className="flex items-center gap-2 w-full">
       <Lightbulb size={16} />
       <div className="w-full flex-1 flex items-center justify-between">
-        <span>{content.answer?.length === 0 ? 'Thinking...' : 'Thoughts'}</span>
+        <span>{content.answer?.length === 0 ? 'Đang suy nghĩ...' : 'Suy nghĩ'}</span>
         {content.answer?.length === 0 && isLoading ? (
           <Loader2
             size={16}
