@@ -35,12 +35,12 @@ export function ChatShare({ chatId, className }: ChatShareProps) {
     })
     const result = await shareChat(chatId)
     if (!result) {
-      toast.error('Failed to share chat')
+      toast.error('Không thể chia sẻ trò chuyện')
       return
     }
 
     if (!result.sharePath) {
-      toast.error('Could not copy link to clipboard')
+      toast.error('Không thể sao chép liên kết vào khay nhớ tạm')
       return
     }
 
@@ -51,10 +51,10 @@ export function ChatShare({ chatId, className }: ChatShareProps) {
   const handleCopy = () => {
     if (shareUrl) {
       copyToClipboard(shareUrl)
-      toast.success('Link copied to clipboard')
+      toast.success('Liên kết được sao chép vào khay nhớ tạm')
       setOpen(false)
     } else {
-      toast.error('No link to copy')
+      toast.error('Không có liên kết để sao chép')
     }
   }
 
@@ -78,20 +78,20 @@ export function ChatShare({ chatId, className }: ChatShareProps) {
         </DialogTrigger>
         <DialogContent>
           <DialogHeader>
-            <DialogTitle>Share link to search result</DialogTitle>
+            <DialogTitle>Chia sẻ liên kết đến kết quả tìm kiếm</DialogTitle>
             <DialogDescription>
-              Anyone with the link will be able to view this search result.
+              Bất kỳ ai có liên kết sẽ có thể xem kết quả tìm kiếm này.
             </DialogDescription>
           </DialogHeader>
           <DialogFooter className="items-center">
             {!shareUrl && (
               <Button onClick={handleShare} disabled={pending} size="sm">
-                {pending ? <Spinner /> : 'Get link'}
+                {pending ? <Spinner /> : 'Lấy liên kết'}
               </Button>
             )}
             {shareUrl && (
               <Button onClick={handleCopy} disabled={pending} size="sm">
-                {'Copy link'}
+                {'Sao chép liên kết'}
               </Button>
             )}
           </DialogFooter>
