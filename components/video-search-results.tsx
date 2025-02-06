@@ -67,7 +67,7 @@ export function VideoSearchResults({ results }: VideoSearchResultsProps) {
   }, [api, selectedIndex])
 
   if (!results.videos || results.videos.length === 0) {
-    return <div className="text-muted-foreground">No videos found</div>
+    return <div className="text-muted-foreground">Không có video</div>
   }
 
   return (
@@ -117,7 +117,7 @@ export function VideoSearchResults({ results }: VideoSearchResultsProps) {
           </DialogTrigger>
           <DialogContent className="sm:max-w-3xl max-h-[80vh] overflow-auto">
             <DialogHeader>
-              <DialogTitle>Search Videos</DialogTitle>
+              <DialogTitle>Tìm kiếm video</DialogTitle>
               <DialogDescription className="text-sm">
                 {results.searchParameters.q}
               </DialogDescription>
@@ -150,16 +150,16 @@ export function VideoSearchResults({ results }: VideoSearchResultsProps) {
                 </CarouselContent>
                 <div className="absolute inset-8 flex items-center justify-between p-4 pointer-events-none">
                   <CarouselPrevious className="w-10 h-10 rounded-full shadow focus:outline-none pointer-events-auto">
-                    <span className="sr-only">Previous</span>
+                    <span className="sr-only">Truớc</span>
                   </CarouselPrevious>
                   <CarouselNext className="w-10 h-10 rounded-full shadow focus:outline-none pointer-events-auto">
-                    <span className="sr-only">Next</span>
+                    <span className="sr-only">Tiếp</span>
                   </CarouselNext>
                 </div>
               </Carousel>
               <div className="py-2">
                 <div className="text-center text-sm text-muted-foreground">
-                  {current} of {count}
+                  {current} trong {count}
                 </div>
               </div>
             </div>
