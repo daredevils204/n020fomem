@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     creator: '@miiura'
   },
   viewport: "width=device-width, initial-scale=1, maximum-scale=1",
-  themeColor: "#000000",
+  themeColor: "#ffffff",
   appleWebApp: {
     capable: true,
     statusBarStyle: "default",
