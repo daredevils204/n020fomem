@@ -17,13 +17,13 @@ const fontSans = FontSans({
 const title = 'nexa'
 const description =
   'A search and answer engine, powered up with AI. Developed by Nguyen Tien Dat & Nguyen Van Toan'
-const images = '/opengraph-image.png'
+const image = '/opengraph-image.png'
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://morphic.sh'),
   title,
   description,
-  images,
+  image,
   openGraph: {
     title,
     description,
