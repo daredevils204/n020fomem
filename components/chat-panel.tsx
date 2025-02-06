@@ -99,7 +99,7 @@ export function ChatPanel({
             tabIndex={0}
             onCompositionStart={handleCompositionStart}
             onCompositionEnd={handleCompositionEnd}
-            placeholder="Ask a question..."
+            placeholder="Hỏi một câu hỏi..."
             spellCheck={false}
             value={input}
             className="resize-none w-full min-h-12 bg-transparent border-0 px-4 py-3 text-sm placeholder:text-muted-foreground focus-visible:outline-none disabled:cursor-not-allowed disabled:opacity-50"
@@ -159,7 +159,7 @@ export function ChatPanel({
             </div>
           </div>
         </div>
-        <p className="mt-2 text-xs tracking-tight text-center text-gray-500 dark:text-gray-400">Nexa can answer wrong. Please check the information before trusting or using.</p>
+        <p className="mt-2 text-xs tracking-tight text-center text-gray-500 dark:text-gray-400">Nexa có thể trả lời sai. Vui lòng kiểm tra thông tin trước khi tin tưởng hoặc sử dụng.</p>
 
         {messages.length === 0 && (
           <EmptyScreen
