@@ -23,7 +23,6 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://morphic.sh'),
   title,
   description,
-  image,
   openGraph: {
     title,
     description,
