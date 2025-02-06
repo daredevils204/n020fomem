@@ -39,7 +39,7 @@ export function ClearHistory({ empty }: ClearHistoryProps) {
           </AlertDialogDescription>
         </AlertDialogHeader>
         <AlertDialogFooter>
-          <AlertDialogCancel disabled={isPending}>Cancel</AlertDialogCancel>
+          <AlertDialogCancel disabled={isPending}>Hủy</AlertDialogCancel>
           <AlertDialogAction
             disabled={isPending}
             onClick={event => {
@@ -49,13 +49,13 @@ export function ClearHistory({ empty }: ClearHistoryProps) {
                 if (result?.error) {
                   toast.error(result.error)
                 } else {
-                  toast.success('History cleared')
+                  toast.success('Đã xoá lịch sử!')
                 }
                 setOpen(false)
               })
             }}
           >
-            {isPending ? <Spinner /> : 'Clear'}
+            {isPending ? <Spinner /> : 'Xoá'}
           </AlertDialogAction>
         </AlertDialogFooter>
       </AlertDialogContent>
