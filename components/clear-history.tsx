@@ -28,15 +28,14 @@ export function ClearHistory({ empty }: ClearHistoryProps) {
     <AlertDialog open={open} onOpenChange={setOpen}>
       <AlertDialogTrigger asChild>
         <Button variant="outline" className="w-full" disabled={empty}>
-          Clear History
+          Xoá lịch sử
         </Button>
       </AlertDialogTrigger>
       <AlertDialogContent>
         <AlertDialogHeader>
-          <AlertDialogTitle>Are you absolutely sure?</AlertDialogTitle>
+          <AlertDialogTitle>Bạn có hoàn toàn chắc chắn không?</AlertDialogTitle>
           <AlertDialogDescription>
-            This action cannot be undone. This will permanently delete your
-            history and remove your data from our servers.
+            Hành động này không thể hoàn tác. Điều này sẽ xóa vĩnh viễn lịch sử và xóa dữ liệu của bạn khỏi máy chủ của chúng tôi.
           </AlertDialogDescription>
         </AlertDialogHeader>
         <AlertDialogFooter>
