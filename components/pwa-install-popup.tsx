@@ -34,9 +34,9 @@ export function PWAInstallPopup() {
       deferredPrompt.prompt()
       deferredPrompt.userChoice.then((choiceResult: { outcome: string }) => {
         if (choiceResult.outcome === "accepted") {
-          console.log("User accepted the install prompt")
+          console.log("Người dùng đã chấp nhận lời nhắc cài đặt")
         } else {
-          console.log("User dismissed the install prompt")
+          console.log("Người dùng đã loại bỏ lời nhắc cài đặt")
         }
         setDeferredPrompt(null)
       })
