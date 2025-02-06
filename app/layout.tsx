@@ -60,7 +60,7 @@ export default function RootLayout({
   const enableSaveChatHistory =
     process.env.NEXT_PUBLIC_ENABLE_SAVE_CHAT_HISTORY === 'true'
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="vi" suppressHydrationWarning>
       <body className={cn('font-sans antialiased', fontSans.variable)}>
         <ThemeProvider
           attribute="class"
