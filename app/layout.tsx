@@ -31,7 +31,18 @@ export const metadata: Metadata = {
     description,
     card: 'summary_large_image',
     creator: '@miiura'
-  }
+  },
+  viewport: "width=device-width, initial-scale=1, maximum-scale=1",
+  themeColor: "#000000",
+  appleWebApp: {
+    capable: true,
+    statusBarStyle: "default",
+    title: "NexaSearch",
+  },
+  formatDetection: {
+    telephone: false,
+  },
+  manifest: "/manifest.json",
 }
 
 export const viewport: Viewport = {
