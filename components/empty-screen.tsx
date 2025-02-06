@@ -3,20 +3,20 @@ import { ArrowRight } from 'lucide-react'
 
 const exampleMessages = [
   {
-    heading: 'What is DeepSeek R1?',
-    message: 'What is DeepSeek R1?'
+    heading: 'DeepSeek R1 là gì?',
+    message: 'DeepSeek R1 là gì?'
   },
   {
-    heading: 'Why is Nvidia growing rapidly?',
-    message: 'Why is Nvidia growing rapidly?'
+    heading: 'Tại sao Nvidia lại phát triển nhanh chóng?',
+    message: 'Tại sao Nvidia lại phát triển nhanh chóng?'
   },
   {
-    heading: 'Tesla vs Rivian',
-    message: 'Tesla vs Rivian'
+    heading: 'Tesla với Rivian',
+    message: 'Tesla với Rivian'
   },
   {
-    heading: 'Summary: https://arxiv.org/pdf/2501.05707',
-    message: 'Summary: https://arxiv.org/pdf/2501.05707'
+    heading: 'Tóm tắt: https://arxiv.org/pdf/2501.05707',
+    message: 'Tóm tắt: https://arxiv.org/pdf/2501.05707'
   }
 ]
 export function EmptyScreen({
