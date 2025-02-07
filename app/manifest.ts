@@ -2,9 +2,9 @@ import type { MetadataRoute } from "next"
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: "NexaSearch",
-    short_name: "NexaSearch",
-    description: "Search engine powered by Next.js",
+    name: "nexa",
+    short_name: "nexa",
+    description: "Công cụ tìm kiếm được nâng cấp với AI",
     start_url: "/",
     display: "standalone",
     background_color: "#ffffff",
