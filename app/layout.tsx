@@ -16,7 +16,7 @@ const fontSans = FontSans({
 
 const title = 'nexa'
 const description =
-  'A search and answer engine, powered up with AI. Developed by Nguyen Tien Dat & Nguyen Van Toan'
+  'Một công cụ tìm kiếm và trả lời, được hỗ trợ bởi AI. Được phát triển bởi Nguyễn Tiến Đạt & Nguyễn Văn Toàn'
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://morphic.sh'),
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
   appleWebApp: {
     capable: true,
     statusBarStyle: "default",
-    title: "NexaSearch",
+    title: "nexa",
   },
   formatDetection: {
     telephone: false,
