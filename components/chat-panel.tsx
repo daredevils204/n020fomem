@@ -1,16 +1,15 @@
-'use client'
+"use client"
 
-import { cn } from '@/lib/utils'
-import { Message } from 'ai'
-import { ArrowUp, MessageCirclePlus, Square } from 'lucide-react'
-import { useRouter } from 'next/navigation'
-import { useEffect, useRef, useState } from 'react'
-import Textarea from 'react-textarea-autosize'
-import { EmptyScreen } from './empty-screen'
-import { ModelSelector } from './model-selector'
-import { SearchModeToggle } from './search-mode-toggle'
-import { Button } from './ui/button'
-import { IconLogo } from './ui/icons'
+import { cn } from "@/lib/utils"
+import type { Message } from "ai"
+import { ArrowUp, MessageCirclePlus, Square, ChevronLeft, ChevronRight } from "lucide-react"
+import { useRouter } from "next/navigation"
+import { useEffect, useRef, useState } from "react"
+import Textarea from "react-textarea-autosize"
+import { EmptyScreen } from "./empty-screen"
+import { ModelSelector } from "./model-selector"
+import { SearchModeToggle } from "./search-mode-toggle"
+import { Button } from "./ui/button"
 
 interface ChatPanelProps {
   input: string
@@ -24,6 +23,50 @@ interface ChatPanelProps {
   append: (message: any) => void
 }
 
+// New ImageCarousel component
+function ImageCarousel() {
+  const [currentIndex, setCurrentIndex] = useState(0)
+  const images = [
+    "/placeholder.svg?height=150&width=150",
+    "/placeholder.svg?height=150&width=150",
+    "/placeholder.svg?height=150&width=150",
+    "/placeholder.svg?height=150&width=150",
+    "/placeholder.svg?height=150&width=150",
+  ]
+
+  const nextImage = () => {
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length)
+  }
+
+  const prevImage = () => {
+    setCurrentIndex((prevIndex) => (prevIndex - 1 + images.length) % images.length)
+  }
+
+  return (
+    <div className="relative w-full max-w-[200px] mx-auto">
+      <img
+        src={images[currentIndex] || "/placeholder.svg"}
+        alt={`AI Art ${currentIndex + 1}`}
+        className="w-[150px] h-[150px] object-cover rounded-lg shadow-md mx-auto"
+      />
+      <button
+        onClick={prevImage}
+        className="absolute left-0 top-1/2 transform -translate-y-1/2 bg-white bg-opacity-50 rounded-full p-1 hover:bg-opacity-75 transition-all"
+        aria-label="Previous image"
+      >
+        <ChevronLeft className="w-5 h-5" />
+      </button>
+      <button
+        onClick={nextImage}
+        className="absolute right-0 top-1/2 transform -translate-y-1/2 bg-white bg-opacity-50 rounded-full p-1 hover:bg-opacity-75 transition-all"
+        aria-label="Next image"
+      >
+        <ChevronRight className="w-5 h-5" />
+      </button>
+    </div>
+  )
+}
+
 export function ChatPanel({
   input,
   handleInputChange,
@@ -33,14 +76,14 @@ export function ChatPanel({
   setMessages,
   query,
   stop,
-  append
+  append,
 }: ChatPanelProps) {
   const [showEmptyScreen, setShowEmptyScreen] = useState(false)
   const router = useRouter()
   const inputRef = useRef<HTMLTextAreaElement>(null)
   const isFirstRender = useRef(true)
-  const [isComposing, setIsComposing] = useState(false) // Composition state
-  const [enterDisabled, setEnterDisabled] = useState(false) // Disable Enter after composition ends
+  const [isComposing, setIsComposing] = useState(false)
+  const [enterDisabled, setEnterDisabled] = useState(false)
 
   const handleCompositionStart = () => setIsComposing(true)
 
@@ -54,28 +97,26 @@ export function ChatPanel({
 
   const handleNewChat = () => {
     setMessages([])
-    router.push('/')
+    router.push("/")
   }
 
-  // if query is not empty, submit the query
   useEffect(() => {
     if (isFirstRender.current && query && query.trim().length > 0) {
       append({
-        role: 'user',
-        content: query
+        role: "user",
+        content: query,
       })
       isFirstRender.current = false
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [query])
+  }, [query, append])
 
   return (
     <div
       className={cn(
-        'mx-auto w-full',
+        "mx-auto w-full",
         messages.length > 0
-          ? 'fixed bottom-0 left-0 right-0 bg-background'
-          : 'fixed bottom-8 left-0 right-0 top-6 flex flex-col items-center justify-center'
+          ? "fixed bottom-0 left-0 right-0 bg-background"
+          : "fixed bottom-8 left-0 right-0 top-6 flex flex-col items-center justify-center",
       )}
     >
       {messages.length === 0 && (
@@ -83,12 +124,10 @@ export function ChatPanel({
           <h5 className="text-xl text-black tracking-tight font-bold dark:text-white">nexa</h5>
         </div>
       )}
+
       <form
         onSubmit={handleSubmit}
-        className={cn(
-          'max-w-3xl w-full mx-auto',
-          messages.length > 0 ? 'px-2 py-4' : 'px-6'
-        )}
+        className={cn("max-w-3xl w-full mx-auto", messages.length > 0 ? "px-2 py-4" : "px-6")}
       >
         <div className="relative flex flex-col w-full gap-2 bg-muted rounded-3xl border border-input">
           <Textarea
@@ -103,17 +142,12 @@ export function ChatPanel({
             spellCheck={false}
             value={input}
             className="resize-none w-full min-h-12 bg-transparent border-0 px-4 py-3 text-sm placeholder:text-muted-foreground focus-visible:outline-none disabled:cursor-not-allowed disabled:opacity-50"
-            onChange={e => {
+            onChange={(e) => {
               handleInputChange(e)
               setShowEmptyScreen(e.target.value.length === 0)
             }}
-            onKeyDown={e => {
-              if (
-                e.key === 'Enter' &&
-                !e.shiftKey &&
-                !isComposing &&
-                !enterDisabled
-              ) {
+            onKeyDown={(e) => {
+              if (e.key === "Enter" && !e.shiftKey && !isComposing && !enterDisabled) {
                 if (input.trim().length === 0) {
                   e.preventDefault()
                   return
@@ -147,10 +181,10 @@ export function ChatPanel({
                 </Button>
               )}
               <Button
-                type={isLoading ? 'button' : 'submit'}
-                size={'icon'}
-                variant={'outline'}
-                className={cn(isLoading && 'animate-pulse', 'rounded-full')}
+                type={isLoading ? "button" : "submit"}
+                size={"icon"}
+                variant={"outline"}
+                className={cn(isLoading && "animate-pulse", "rounded-full")}
                 disabled={input.length === 0 && !isLoading}
                 onClick={isLoading ? stop : undefined}
               >
@@ -159,24 +193,28 @@ export function ChatPanel({
             </div>
           </div>
         </div>
-        <p className="mt-2 text-xs tracking-tight text-center text-gray-500 dark:text-gray-400">Nexa có thể trả lời sai. Vui lòng kiểm tra thông tin trước khi tin tưởng hoặc sử dụng.</p>
-        
-        <div className="mb-8 w-full max-w-sm mx-auto">
-          <h2 className="text-xl font-bold text-center mb-4 text-black dark:text-white">NexaArt - Nghệ Thuật AI</h2>
-          <NexaArtCarousel />
+        <p className="mt-2 text-xs tracking-tight text-center text-gray-500 dark:text-gray-400">
+          Nexa có thể trả lời sai. Vui lòng kiểm tra thông tin trước khi tin tưởng hoặc sử dụng.
+        </p>
+
+        {/* Updated Art Image Showcasing section with carousel */}
+        <div className="mb-8 w-full max-w-3xl">
+          <h2 className="text-2xl font-bold text-center mb-4 text-black dark:text-white">NexaArt - Nghệ Thuật AI</h2>
+          <ImageCarousel />
         </div>
 
         {messages.length === 0 && (
           <EmptyScreen
-            submitMessage={message => {
+            submitMessage={(message) => {
               handleInputChange({
-                target: { value: message }
+                target: { value: message },
               } as React.ChangeEvent<HTMLTextAreaElement>)
             }}
-            className={cn(showEmptyScreen ? 'visible' : 'invisible')}
+            className={cn(showEmptyScreen ? "visible" : "invisible")}
           />
         )}
       </form>
     </div>
   )
 }
+
