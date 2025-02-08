@@ -160,6 +160,27 @@ export function ChatPanel({
           </div>
         </div>
         <p className="mt-2 text-xs tracking-tight text-center text-gray-500 dark:text-gray-400">Nexa có thể trả lời sai. Vui lòng kiểm tra thông tin trước khi tin tưởng hoặc sử dụng.</p>
+        
+        <div className="mb-8 w-full max-w-3xl">
+          <h2 className="text-2xl font-bold text-center mb-4 text-black dark:text-white">NexaArt - Nghệ Thuật AI</h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+            <img
+              src="/placeholder.svg?height=200&width=200"
+              alt="AI Art 1"
+              className="w-full h-auto rounded-lg shadow-md"
+            />
+             <img
+              src="/placeholder.svg?height=200&width=200"
+              alt="AI Art 2"
+              className="w-full h-auto rounded-lg shadow-md"
+            />
+            <img
+              src="/placeholder.svg?height=200&width=200"
+              alt="AI Art 3"
+              className="w-full h-auto rounded-lg shadow-md"
+            />
+          </div>
+        </div>
 
         {messages.length === 0 && (
           <EmptyScreen
