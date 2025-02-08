@@ -77,8 +77,7 @@ export function ChatPanel({
     >
       {messages.length === 0 && (
         <div className="mb-8">
-          <IconLogo className={cn('w-5 h-5')} />
-          <span className="sr-only">Morphic</span>
+          <IconLogo className="size-12 text-muted-foreground" />
         </div>
       )}
 
