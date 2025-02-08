@@ -1,3 +1,4 @@
+import { AuthProvider } from "@/contexts/auth-context"
 import { PWARegister } from "@/components/pwa-register"
 import Footer from '@/components/footer'
 import Header from '@/components/header'
