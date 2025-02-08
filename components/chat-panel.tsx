@@ -23,50 +23,6 @@ interface ChatPanelProps {
   append: (message: any) => void
 }
 
-// New ImageCarousel component
-function ImageCarousel() {
-  const [currentIndex, setCurrentIndex] = useState(0)
-  const images = [
-    "/placeholder.svg?height=150&width=150",
-    "/placeholder.svg?height=150&width=150",
-    "/placeholder.svg?height=150&width=150",
-    "/placeholder.svg?height=150&width=150",
-    "/placeholder.svg?height=150&width=150",
-  ]
-
-  const nextImage = () => {
-    setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length)
-  }
-
-  const prevImage = () => {
-    setCurrentIndex((prevIndex) => (prevIndex - 1 + images.length) % images.length)
-  }
-
-  return (
-    <div className="relative w-full max-w-[200px] mx-auto">
-      <img
-        src={images[currentIndex] || "/placeholder.svg"}
-        alt={`AI Art ${currentIndex + 1}`}
-        className="w-[150px] h-[150px] object-cover rounded-lg shadow-md mx-auto"
-      />
-      <button
-        onClick={prevImage}
-        className="absolute left-0 top-1/2 transform -translate-y-1/2 bg-white bg-opacity-50 rounded-full p-1 hover:bg-opacity-75 transition-all"
-        aria-label="Previous image"
-      >
-        <ChevronLeft className="w-5 h-5" />
-      </button>
-      <button
-        onClick={nextImage}
-        className="absolute right-0 top-1/2 transform -translate-y-1/2 bg-white bg-opacity-50 rounded-full p-1 hover:bg-opacity-75 transition-all"
-        aria-label="Next image"
-      >
-        <ChevronRight className="w-5 h-5" />
-      </button>
-    </div>
-  )
-}
-
 export function ChatPanel({
   input,
   handleInputChange,
@@ -196,12 +152,6 @@ export function ChatPanel({
         <p className="mt-2 text-xs tracking-tight text-center text-gray-500 dark:text-gray-400">
           Nexa có thể trả lời sai. Vui lòng kiểm tra thông tin trước khi tin tưởng hoặc sử dụng.
         </p>
-
-        {/* Updated Art Image Showcasing section with carousel */}
-        <div className="mb-8 w-full max-w-3xl">
-          <h2 className="text-2xl font-bold text-center mb-4 text-black dark:text-white">NexaArt - Nghệ Thuật AI</h2>
-          <ImageCarousel />
-        </div>
 
         {messages.length === 0 && (
           <EmptyScreen
