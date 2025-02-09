@@ -9,11 +9,10 @@ type HistoryItemProps = {
   chat: Chat
 }
 
-const HistoryItem: React.FC<HistoryItemProps> = ({ chat }) => {
+export const Header: React.FC<HistoryItemProps> = async ({ chat }) => {
   const pathname = usePathname()
   const isActive = pathname === chat.path
 
-export const Header: React.FC = async () => {
   return (
     <header className="fixed w-full p-2 flex justify-between items-center z-10 backdrop-blur md:backdrop-blur-none bg-background/80 md:bg-transparent">
       <div>
