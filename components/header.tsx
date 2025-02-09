@@ -3,6 +3,7 @@ import React from 'react'
 import HistoryContainer from './history-container'
 import { ModeToggle } from './mode-toggle'
 import { IconLogo } from './ui/icons'
+import { Chat } from '@/lib/types'
 
 export const Header: React.FC = async () => {
   return (
