@@ -13,6 +13,11 @@ export const Header: React.FC = async () => {
           <span className="sr-only">nexa</span>
         </a>
       </div>
+      <div>
+          <div className="text-xs font-medium truncate select-none">
+            {chat.title}
+          </div>
+      </div>
       <div className="flex gap-0.5">
         <ModeToggle />
         <HistoryContainer location="header" />
