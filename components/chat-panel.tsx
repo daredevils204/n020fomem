@@ -11,6 +11,7 @@ import { ModelSelector } from "./model-selector"
 import { SearchModeToggle } from "./search-mode-toggle"
 import { Button } from "./ui/button"
 import { IconLogo } from './ui/icons'
+import { Link } from 'react-router-dom'
 
 interface ChatPanelProps {
   input: string
