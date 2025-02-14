@@ -151,7 +151,7 @@ export function ChatPanel({
           </div>
         </div>
         <p className="mt-2 text-xs tracking-tight text-center text-gray-500 dark:text-gray-400">
-          Nexa có thể trả lời sai. Vui lòng kiểm tra thông tin trước khi tin tưởng hoặc sử dụng. Nexa có các thứ tiếng: <a href="https://nexasearch.vercel.app">Tiếng Việt</a> - <a href="https://nekusasachi.vercel.app">Tiếng Nhật</a> - <a href="https://naixun.vercel.app">Tiếng Trung</a>
+          Nexa có thể trả lời sai. Vui lòng kiểm tra thông tin trước khi tin tưởng hoặc sử dụng. Nexa có các thứ tiếng: <a href="https://nexasearch.vercel.app">Tiếng Việt</a> - <a href="https://nekusasachi.vercel.app">Tiếng Nhật</a> - <a href="https://naixun.vercel.app">Tiếng Trung</a> - <a href="https://neksain.vercel.app">Tiếng Hàn</a>
         </p>
 
         {messages.length === 0 && (
